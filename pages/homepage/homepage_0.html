@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Homepage_0</title>
+		<style>
+			@font-face {
+				font-family: shouxie;
+				src: url('../../Fonts/Permanent_Marker/PermanentMarker-Regular.ttf');
+			}
+
+			/*整体css样式设置*/
+			:root {
+				--backgroundcolor_day: rgb(252, 252, 250);
+				--backgroundcolor_night: rgb(48, 48, 48);
+				--drop-shadow1: drop-shadow(0px 5px 8px hsl(285deg 30% 40% / 0.5));
+				--drop-shadow2: drop-shadow(0px 5px 8px hsl(285deg 30% 40% / 0.5));
+				--drop-shadow3: drop-shadow(0px 5px 8px hsl(285deg 30% 40% / 0.5));
+
+			}
+
+			* {
+				position: absolute;
+
+				margin: 0%;
+			}
+
+			body {
+				width: 100vw;
+				height: 800vh;
+			}
+
+			/*主体结构css设置*/
+			.homepage_wrapper {
+				width: 100%;
+				height: 800vh;
+
+			}
+
+			.homepage_content {
+				width: 100%;
+				height: 100%;
+				background-color: var(--backgroundcolor_day); //汉白玉
+				overflow: hidden;
+			}
+
+			.homepage_section_wrapper {
+				width: 100%;
+				height: 100vh;
+				border: solid black 5px;
+				position: absolute;
+
+			}
+
+			.homepage_header {
+				display: none;
+				position: fixed;
+			}
+
+			.homepage_footer {}
+
+
+			/*Section1 css设置 */
+
+			.homepage_section1_content {
+				position: absolute;
+				width: 100%;
+			}
+
+			/*Section1_header css设置*/
+
+			.section1_header_wrap {
+				width: 100%;
+				height: 20vh;
+				position: relative;
+			}
+
+			.section1_header_content {
+				width: 90%;
+				height: 50%;
+				margin-top: 3vh;
+				margin-left: 4%;
+				display: flex;
+			}
+
+			.section1_header_logo {
+				width: 200px;
+				height: 10vh;
+				background-image: url("../../img/homepage_img/logo/logo_with_character.png");
+				background-size: cover;
+				filter: drop-shadow(3px 3px 2px rgb(144, 156, 200));
+			}
+
+			/* Section1_main css设置 */
+			.section1_main_wrap {
+				width: 100%;
+				height: 80vh;
+	
+				position: relative;
+			}
+
+			.section1_main_content {
+				width: 90%;
+				height: 70vh;
+				margin-top: 5vh;
+				margin-left: 5%;
+				display: flex;
+
+			}
+
+			.section1_main_shadowbelow {
+				width: 100%;
+				height: 100%;
+				background-image: url('../../img/inbetweening/sundry/shadow_below.webp');
+				background-size: cover;
+				background-position: center;
+				opacity: 0.3;
+			}
+
+			.section1_main_logo {
+				font-family: shouxie;
+				font-weight: 800;
+				width: 40%;
+				height: 100%;
+				margin-left: 10vw;
+				position: relative;
+
+			}
+
+			.section1_main_inbetween {
+				width: 65vw;
+				height: 40vw;
+				background: url("../../img/inbetweening/Gallery.manypixels/research/Laboratory Analyst_Isometric.svg");
+				background-size: cover;
+				position: relative;
+				top: 50px;
+				left: 0px;
+			}
+
+			.section1_main_font1 {
+				z-index: 1;
+				position: relative;
+				font-size: 10vw;
+			}
+
+			.section1_main_font2 {
+				z-index: 1;
+				position: relative;
+				font-size: 5vw;
+			}
+
+			.section1_main_font3 {
+				color: #f0f8ff;
+				z-index: 1;
+				top: 20vh;
+				left: 10vw;
+				font-size: 10vw;
+				filter: var(--drop-shadow3)
+			}
+		</style>
+	</head>
+	<body>
+		<div class="homepage_wrapper">
+			<div class="homepage_content">
+				<div class="homepage_header"></div>
+				<div class="homepage_section_wrapper">
+					<div class="homepage_section1_content">
+						<div class="section1_header_wrap">
+							<div class="section1_header_content">
+								<div class="section1_header_logo"></div>
+								<div class="section1_header_navili"></div>
+								<div class="section1_header_contactus"></div>
+							</div>
+						</div>
+						<div class="section1_main_wrap">
+							<div class="section1_main_content">
+								<div class="section1_main_shadowbelow"></div>
+								<div class="section1_main_logo">
+									<div class="section1_main_font1">Reach</div>
+									<div class="section1_main_font2">For</div>
+									<div class="section1_main_font3">Light</div>
+								</div>
+								<div class="section1_main_inbetween"></div>
+							</div>
+						</div>
+						<div class="section1_footer">
+
+						</div>
+					</div>
+				</div>
+				<div class="homepage_section_wrapper"></div>
+				<div class="homepage_section_wrapper"></div>
+				<div class="homepage_section_wrapper"></div>
+				<div class="homepage_section_wrapper"></div>
+				<div class="homepage_footer"></div>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>//引入jQuery
+	<script>
+		$(function() {
+			let pageX = window.pageX
+			let pageY = window.pageY
+			let screenX = window.screenX
+			let screenY = window.screenY
+
+
+			var shadowY = new Array();
+			var shadowX = new Array();
+			var scrollY1 = 0
+
+			$(document).on('mousemove ', function(e) {
+
+				pageX = e.pageX;
+				pageY = e.pageY;
+				screenX = e.screenX;
+				screenY = e.screenY;
+				color = ['#000000', '']
+
+
+				for (var i = 1; i < 4; i++) {
+
+					shadowX[i] = -(pageX - $(".section1_main_font" + i).offset().left - $(
+						".section1_main_font" + i).width() / 2) * 1 / 100;
+					shadowY[i] = -(pageY - $(".section1_main_font" + i).offset().top - $(
+						".section1_main_font" + i).height() / 2) * 1 / 100;
+
+					document.documentElement.style.setProperty(
+					'--drop-shadow' + i + '', ' drop-shadow(' +
+						shadowX[i] + 'px ' + shadowY[i] + 'px 10px hsl(220deg 60% 50% / 0.3))' +
+						'drop-shadow(' + 4 * shadowX[i] + 'px ' + 4 * shadowY[i] +
+						'px 7px hsl(220deg 60% 50% / 0.3))' +
+						'drop-shadow(' + 6 * shadowX[i] + 'px ' + 6 * shadowY[i] +
+						'px 5px hsl(220deg 60% 50% / 0.3))'
+					)
+
+				}
+
+
+				/*           $(".wrap").css("box-shadow", '  '+shadowX+'px '+shadowY+'px 2.2px rgba(0, 0, 0, 0.02),' +
+		                       ''+2*shadowX+'px '+1*shadowY+'px 5.3px rgba(0, 0, 0, 0.028),'  +
+		                       ''+4*shadowX+'px '+2*shadowY+'px 10px rgba(0, 0, 0, 0.035),' +
+		                       ''+7*shadowX+'px '+3.5*shadowY+'px 17.9px rgba(0, 0, 0, 0.042),'  +
+		                       ''+14*shadowX+'px '+7*shadowY+'px 33.4px rgba(0, 0, 0, 0.05),' +
+		                       ''+28*shadowX+'px '+14*shadowY+'px 80px rgba(0, 0, 0, 0.07)' )
+		       */
+			})
+
+		})
+	</script>
+</html>

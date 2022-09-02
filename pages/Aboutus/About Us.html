@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link href="https://fonts.font.im/css?family=Cabin|Do+Hyeon|Hanalei+Fill|Libre+Barcode+39+Extended+Text|Modern+Antiqua|Monoton|Nunito|Orbitron|Pacifico|Permanent+Marker|Playfair+Display+SC|Preahvihear|Raleway|Righteous"
+          rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        .AboutUs-wrap {
+            margin: 0px;
+            display: flex;
+            width: 100%;
+            height: 3000px;
+            border: solid black 5px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .AboutUs-pagestyle {
+            width: 100%;
+            height: 650px;
+
+        }
+
+        .AboutUs-1wrap {
+            background-color: snow;
+            position: relative;
+        }
+
+        .AboutUs-1content {
+            width: 65%;
+            height: 400px;
+            /*  border: solid #00ff6f 5px;*/
+            position: absolute;
+            top: 100px;
+            left: 10%;
+        }
+
+        #AboutUs-1-1 {
+
+            width: 15px;
+            height: 20px;
+            background-color: chocolate;
+            transform: skewX(-45deg);
+
+        }
+
+        #AboutUs-1-2 {
+            width: 100%;
+            height: 300px;
+            /*          border: solid black 5px;*/
+            position: absolute;
+            left: 25px;
+            top: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        #AboutUs-1-2-1 {
+            position: relative;
+            top: 20px;
+            font-family: 'Preahvihear', cursive;
+            font-weight: bold;
+            font-size: 25px;
+            width: 100%;
+            height: 50px;
+        }
+
+        #AboutUs-1-2-2 {
+            font-family: 'Righteous', cursive;
+            width: 450px;
+            height: 100px;
+            font-size: 65px;
+            font-weight: bolder;
+
+        }
+
+        #AboutUs-1-2-3 {
+            font-family: 'Do Hyeon', sans-serif;
+
+            color: darkgray;
+            width: 80%;
+            height: 150px;
+            font-size: 20px;
+
+        }
+
+        .AboutUs-2wrap {
+            position: relative;
+        }
+
+        .AboutUs-2content {
+            position: absolute;
+            /*   border: solid black 5px;*/
+            width: 100%;
+            height: 650px;
+        }
+
+        #AboutUs-2-1 {
+
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            z-index: 50;
+            width: 650px;
+            height: 300px;
+            position: absolute;
+            left: 100px;
+            top: -100px;
+            /*  border: solid black 5px;*/
+            background-color: #d90a2c;
+        }
+
+        #AboutUs-2-2 {
+
+            position: absolute;
+            width: 100%;
+            height: 1100px;
+
+            overflow: hidden;
+        }
+
+        #AboutUs-2-2h1 {
+            position: relative;
+            left: 50px;
+            color: black;
+            width: 70%;
+            height: 50px;
+            font-size: 15px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        #AboutUs-2-2h2 {
+            margin-top: 0px;
+            position: relative;
+            left: 50px;
+            color: white;
+            width: 70%;
+            height: 100px;
+            font-size: 65px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        #AboutUs-2-2svg {
+            border-radius: 50%;
+            box-shadow: -20px 10px 70px rgba(220, 220, 220, 0.7), 20px -10px 70px rgba(220, 220, 220, 0.7);
+            position: relative;
+            left: 80%;
+        }
+
+        #AboutUs-2-2img {
+            position: relative;
+            width: 100%;
+            height: 1200px;
+
+            background-image: url("../../img/Aboutus_img/Teamphoto2.jpg");
+            background-size: cover;
+			background-position: center;
+        }
+
+
+        .AboutUs-3wrap {
+            position: absolute;
+            /*   border: solid black 5px;*/
+            width: 100%;
+            height: 650px;
+        }
+
+        .AboutUs-3content {
+            position: absolute;
+            /*   border: solid black 5px;*/
+            width: 100%;
+            height: 650px;
+        }
+
+        .AboutUs-5wrap {
+
+        }
+
+        .cursormove {
+            position: absolute;
+            mix-blend-mode: exclusion;
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .cursor-a {
+            z-index: 10000;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            mix-blend-mode: difference;
+            background-color: #ffffff;
+
+        }
+
+        .cursor-f {
+            align-items: center;
+            z-index: 10000;
+            position: absolute;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            mix-blend-mode: exclusion;
+            pointer-events: none;
+            /* opacity: 0.5; 绝对不能加这句
+            */
+            border-radius: 50%;
+            background-color: #fff;
+
+        }
+
+
+        #cursor {
+            position: absolute;
+            left: 0px;
+            width: 240px;
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            align-items: center;
+
+
+        }
+
+        #cursorl {
+            z-index: 999;
+            display: none;
+            font-size: 25px;
+            width: 20px;
+            color: white;
+            width: 20px;
+
+        }
+
+        #cursorR {
+            z-index: 999;
+            display: none;
+            font-size: 25px;
+            width: 20px;
+            color: #fff;
+            width: 20px;
+
+        }
+
+        #cursorT {
+            z-index: 999;
+            display: none;
+
+
+        }
+
+        #cursorB {
+            z-index: 999;
+            display: none;
+
+
+        }
+
+        .shape {
+            display: none;
+            font-weight: bold;
+            font-size: 22px;
+            font-family: 'Cinzel', serif;
+            position: relative;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            padding: 0;
+        }
+
+        .arrows {
+            font-family: 'Monoton', opacity1sive;
+            font-size: 45px;
+            justify-self: center;
+        }
+
+        .item {
+            background: #C0C0C0;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            height: 40px;
+            padding-left: 20px;
+            color: white;
+            font-family: "微软雅黑";
+            text-align: center;
+            padding-top: 15px;
+        }
+
+
+        #content {
+            list-style: none;
+        }
+
+        #add {
+            width: 100px;
+            height: 30px;
+        }
+
+        #drug {
+            visibility: hidden;
+            display: none
+        }
+        html, body {
+            height: 100%;
+        }
+        :root{
+            --color1:rgb(15,20,35);
+            --color2:rgb(16,31,48);
+            --color3:rgb(31,32,64);
+            --color4:rgb(46,49,124);
+            --color5:rgb(48,47,75);
+            --color6:rgb(82,82,136);
+            --color7:rgb(90,90,159);
+
+        }
+        body {
+            background-color: #272727;
+            display: grid;
+            font-family: Avenir, sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -moz-osx-font-smoothing: grayscale;
+            -moz-font-smoothing: antialiased;
+            -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+        }
+
+        .tariffCards {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            margin: -180px 0 0 -140px;
+            user-select: none;
+            transform: translate3d(0, 0, 0);
+            transform-style: preserve-3d;
+        }
+        .tariffCards:after {
+            position:relative;
+            bottom: -27px;
+            left: 5%;
+            content: "";
+            width: 65%;
+            height: 10px;
+            border-radius: 100%;
+            background-image: radial-gradient(rgba(34, 50, 84, 0.04), rgba(34, 50, 84, 0));
+        }
+        .tariffCards > div {
+            position: relative;
+            width: 280px;
+            height: 140px;
+            border-radius: 12px;
+            color: white;
+            transform: rotateX(45deg) rotateY(-15deg) rotate(45deg);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .tariffCards > div:after {
+            position: absolute;
+            top: -70px;
+            left: 0;
+            content: "";
+            width: 200%;
+            height: 200%;
+            background-image: linear-gradient(60deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 80%);
+            transform: translateX(-100%);
+        }
+        .tariffCards > div img {
+            margin-top: 15px;
+            pointer-events: none;
+        }
+        .tariffCards > div h3 {
+            position: absolute;
+            bottom: 28px;
+            left: 15px;
+            font-size: 18px;
+            font-weight: 800;
+        }
+        .tariffCards > div span {
+            position: absolute;
+            font-weight: 700;
+            bottom: 15px;
+            left: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+        .tariffCards > div.first {
+            margin-top: -70px;
+            background-color:var(--color2);
+            background-image: linear-gradient(135deg, var(--color1), var(--color2));
+            box-shadow: 5px 5px 60px rgba(34, 50, 84, 0.1), 1px 1px 0px 1px var(--color2);
+        }
+        .tariffCards > div.second {
+            margin-top: -70px;
+            z-index: 3;
+            background-color: var(--color3);
+            background-image: linear-gradient(135deg,var(--color2), var(--color3));
+            box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px var(--color3);
+        }
+        .tariffCards > div.third {
+            margin-top: -70px;
+            z-index: 2;
+            background-color:var(--color4);
+            background-image: linear-gradient(135deg, var(--color3), var(--color4));
+            box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px var(--color4);
+        }
+        .tariffCards > div.forth {
+            margin-top: -70px;
+            z-index: 1;
+            background-color:var(--color5);
+            background-image: linear-gradient(135deg, var(--color4), var(--color5));
+            box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px var(--color5);
+        }
+
+        .tariffCards > div.fifth {
+            margin-top: -70px;
+            background-color: var(--color6);
+            background-image: linear-gradient(135deg, var(--color5), var(--color6));
+            box-shadow: 5px 5px 60px rgba(34, 50, 84, 0.1), 1px 1px 0px 1px var(--color6);
+        }
+        .tariffCards > div.sixth {
+            margin-top: -70px;
+            background-color: var(--color7);
+            background-image: linear-gradient(135deg, var(--color6), var(--color7));
+            box-shadow: 5px 5px 60px rgba(34, 50, 84, 0.1), 1px 1px 0px 1px var(--color7);
+        }
+        .tariffCards > div:hover {
+            transform: rotateX(30deg) rotateY(-15deg) rotate(20deg) translate(-25px, 50px);
+        }
+        .tariffCards > div:hover:after {
+            transform: translateX(10%);
+            transition: all 0.5s ease-in-out;
+        }
+
+        a {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #0077FF;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+
+
+<body>
+<div class="AboutUs-wrap scroll-content" style="transform:translate3d(0px,0px,0px); ">
+    <div class="AboutUs-1wrap AboutUs-pagestyle main">
+        <div class="AboutUs-1content  ">
+            <div id="AboutUs-1-1"></div>
+            <div id="AboutUs-1-2">
+                <div id="AboutUs-1-2-1 ">About Us</div>
+                <div id="AboutUs-1-2-2" class="secondary">What we make</div>
+                <div id="AboutUs-1-2-3">We are proud of our clients. Beautiful,driven brands with which we want to reach
+                    the maximum every day. Check out our success stories here and get inspired.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="AboutUs-2wrap AboutUs-pagestyle main">
+        <div class="AboutUs-2content">
+            <div id="AboutUs-2-1">
+                <div>
+                    <h1 id="AboutUs-2-2h1">
+                        WE DEVELOP,MAINTAIN AND OPTIMIZE
+                    </h1>
+                    <h2 id="AboutUs-2-2h2" class="secondary">
+                        Profitable
+                        Website.
+                    </h2>
+                    <svg id="AboutUs-2-2svg" t="1657553710955" class="icon third" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="5400" width="150" height="150">
+                        <path d="M753.306 523.238c-7.254 3.03-8.457 10.019-10.889 16.248-14.89 38.084-38.4 69.837-70.093 95.616-2.893 2.347-8.635 3.157-6.8 9.387 76.74 10.154 140.219-17.664 194.056-69.684 42.112-40.704 67.541-94.575 108.825-140.731-25.275-0.094-45.534 5.64-65.45 13.465-52.284 20.531-97.989 54-149.65 75.7z m-6.648 127.685c-27.315 6.604-54.895 6.835-82.577 2.543-11.844-1.844-22.664-0.18-34.142 4.275-23.535 9.096-47.82 16.153-73.736 14.165-3.917-0.333-9.182-2.756-11.554 2.347-2.04 4.446 1.723 8.269 4.044 11.588 19.533 28.186 46.754 44.083 79.932 52.088 63.923 15.488 131.652 8.388 193.954 34.457-0.213-40.294-30.182-98.457-60.27-119.304-5.232-3.61-10.053-3.525-15.65-2.16z m-173.986 10.53c61.995-7.928 111.787-36.804 143.863-91.819 35.15-60.288 40.5-126.54 37.155-199.526-36.02 34.918-78.908 47.437-119.868 63.838-17.1 6.86-33.835 14.754-50.475 22.664-65.493 31.121-85.145 100.873-69.58 164.19 8.37 34.074 23.782 45.15 58.905 40.653zM441.532 347.75c17.655 11.375 32.682 26.19 46.404 41.959 7.834 9.011 16.145 11.597 27.46 10.035 29.491-4.079 58.846-3.806 87.552 5.598 4.43 1.45 9.011 3.43 13.543 0.222-0.06-9.754 4.514-18.594 10.496-24.696 24.593-25.165 17.066-50.73 3.345-77.03-3.115-5.99-6.221-12.007-8.935-18.21-14.404-33.135-36.625-61.637-55.74-92.792-24.32 21.163-51.942 38.682-75.024 61.747-21.342 21.35-42.155 43.145-54.511 71.407-3.857 8.798-4.207 15.582 5.41 21.76z m57.677 296.44c7.62 0.367 11.468 0.444 8.183-9.668-17.937-55.322-11.52-106.983 26.214-152.739 6.375-7.722 6.23-13.166 0.632-20.855-29.491-40.465-60.749-79.83-102.818-107.58-54.853-36.207-113.835-66.15-164.65-108.578-0.3-0.256-1.102 0.06-3.815 0.299-1.98 39.475-0.837 78.182 6.681 116.386 16.905 86.042 47.446 165.896 111.6 228.634 32.503 31.778 71.398 51.857 117.973 54.1z m-5.06 9.07c-15.65-2.397-30.712-4.727-45.355-9.88-46.618-16.445-80.913-48.07-109.722-86.793-5.154-6.912-9.71-13.67-19.644-15.173-20.062-3.063-39.919-7.415-60.416-6.1-67.533 4.394-135.031 8.481-203.417-20.873C107.443 588.919 174.626 630.62 256 652.373c80.145 21.436 203.529 23.032 238.148 0.888z m44.577-206.72c7.63 20.643 7.63 20.643 33.101 3.2-12.783-1.868-22.596-4.573-33.1-3.2z m-215.313 88.082c-8.661-17.144-15.343-29.56-21.29-42.317-6.23-13.389-13.236-26.684-17.332-40.747-8.618-29.55-16.469-38.57-55.611-39.1-28.75-0.392-54.477-7.824-79.429-20.77-7.116-3.686-13.934-9.139-25.053-8.968 18.133 29.099 27.93 60.058 46.464 86.298 21.188 29.994 45.986 55.304 86.4 55.108 20.949-0.103 41.685 0.213 65.851 10.496z m211.43-128.743c-8.149 0.47-22.416-2.184-22.817 5.01-0.538 10.052 10.086 18.568 20.053 24.03 1.544 0.861 3.55 1.006 5.367 1.288 29.432 4.762 58.616 7.176 88.414-11.4-29.952-16.342-59.87-20.762-91.016-18.928z m117.863 11.094c26.453-10.308 52.574-21.026 76.365-36.72 9.77-6.442 19.831-12.748 24.03-24.635 1.186-3.481 1.766-8.004 6.605-6.963 4.428 0.947 4.061 5.265 4.121 9.088 0.563 46.754 3.516 93.645-9.301 139.546-1.22 4.258-4.164 9.105-0.18 14.344 51.525-22.938 82.97-60.373 92.22-117.41 7.126-43.99 2.458-89.728 22.025-134.665-18.09 4.66-33.408 8.602-48.7 12.579-79.872 20.736-148.855 58.103-196.318 128.435-1.416 2.125-4.172 3.379-6.51 4.906 8.635 13.824 19.413 17.792 35.643 11.495zM509.21 659.328c-57.745 22.357-118 24.013-178.45 18.569-19.097-1.699-33.169 2.705-46.77 14.967-39.945 35.9-57.191 83.217-70.41 138.317 37.633-22.98 76.408-26.65 114.894-31.787 28.672-3.814 57.634-7.45 84.659-18.33 52.096-20.966 91.776-54.434 107.059-111.172 2.918-10.786 1.74-15.488-10.982-10.564zM617.088 405.47c-0.034-0.06-0.068-0.103-0.12-0.17-0.162 0.136-0.332 0.136-0.494 0.255 0 0.111-0.026 0.196-0.026 0.324 0.23-0.153 0.444-0.273 0.64-0.41z"
+                              p-id="5401" fill="#cdcdcd"></path>
+                    </svg>
+                </div>
+            </div>
+            <div id="AboutUs-2-2">
+                <div id="AboutUs-2-2img"></div>
+            </div>
+        </div>
+    </div>
+    <div class="AboutUs-3wrap AboutUs-pagestyle">
+
+    </div>
+
+
+    　　
+   
+
+    <div class="AboutUs-5wrap AboutUs-pagestyle">
+
+    </div>
+    <div id="cursor">
+        <div id="cursorl">
+            <svg t="1656753422166" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 p-id="1384" width="20" height="20">
+                <path d="M272.448 472.064l399.232-399.232c22.08-22.08 57.792-22.08 79.872 0 22.016 22.016 22.08 57.792 0 79.872l-359.296 359.296 359.296 359.296c22.016 22.016 22.08 57.792 0 79.872s-57.792 22.016-79.872 0l-399.232-399.232c-22.016-22.08-22.016-57.792 0-79.872z"
+                      p-id="1385" fill="#ffffff"></path>
+            </svg>
+        </div>
+        <div id="cursorF" class="cursor-f"><span id="drug" class="shape">DRUG</span><span id="click"
+                                                                                          class="shape">CLICK</span>
+        </div>
+        <div id="cursorR">
+            <svg t="1656753354918" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 p-id="1164" width="20" height="20">
+                <path d="M751.552 551.936l-399.232 399.232c-22.08 22.08-57.792 22.08-79.872 0-22.016-22.016-22.08-57.792 0-79.872l359.296-359.296-359.296-359.296c-22.016-22.016-22.08-57.792 0-79.872s57.792-22.016 79.872 0l399.232 399.232c22.016 22.08 22.016 57.792 0 79.872z"
+                      p-id="1165" fill="#ffffff"></path>
+            </svg>
+        </div>
+        <div id="cursorT">
+            <svg t="1656753498473" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 p-id="1566" width="20" height="20">
+                <path d="M472.064 272.448l-399.232 399.232c-22.08 22.08-22.08 57.792 0 79.872 22.016 22.016 57.792 22.08 79.872 0L512 392.256l359.296 359.296c22.016 22.016 57.792 22.08 79.872 0 22.08-22.08 22.016-57.792 0-79.872L551.936 272.448C529.856 250.432 494.144 250.432 472.064 272.448z"
+                      p-id="1567" fill="#ffffff"></path>
+            </svg>
+        </div>
+        <div id="cursorB">
+            <svg t="1656753533748" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 p-id="1748" width="20" height="20">
+                <path d="M472.064 751.552 72.832 352.32c-22.08-22.08-22.08-57.792 0-79.872 22.016-22.016 57.792-22.08 79.872 0L512 631.744l359.296-359.296c22.016-22.016 57.792-22.08 79.872 0 22.08 22.08 22.016 57.792 0 79.872l-399.232 399.232C529.856 773.568 494.144 773.568 472.064 751.552z"
+                      p-id="1749" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    
+
+</script>
+<script>
+    $(document).scroll(function () {
+        window.screenY = window.screenY - window.scrollY;
+        /*  console.log(window.scrollY);*/
+        console.log(window.screenY);
+        var path1 = window.scrollY;
+
+        path1 = 200 * (path1 - 800) / 800 + 'px'
+
+        /*       console.log($("#AboutUs-2-2").css("top"))*/
+        $("#AboutUs-2-2img").css("top", path1)
+
+    })
+    /* $(function (e,n,d){
+         var o=function(t,n){return(o=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,n){t.__proto__=n}||function(t,n){for(var e in n)n.hasOwnProperty(e)&&(t[e]=n[e])})(t,n)},i=function(){return(i=Object.assign||function(t){for(var n,e=1,r=arguments.length;e<r;e++)for(var o in n=arguments[e])Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o]);return t}).apply(this,arguments)};function u(t,n,e,r){var o,i=arguments.length,u=i<3?n:null===r?r=Object.getOwnPropertyDescriptor(n,e):r;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)u=Reflect.decorate(t,n,e,r);else for(var c=t.length-1;c>=0;c--)(o=t[c])&&(u=(i<3?o(u):i>3?o(n,e,u):o(n,e))||u);return i>3&&u&&Object.defineProperty(n,e,u),u}e(59),e(80),e(85),e(94),e(97);var c=function(t){var n=typeof t;return null!=t&&("object"==n||"function"==n)},s=e(57),a="object"==typeof self&&self&&self.Object===Object&&self,f=s.a||a||Function("return this")(),l=f.Symbol,p=Object.prototype,h=p.hasOwnProperty,d=p.toString,v=l?l.toStringTag:void 0,y=Object.prototype.toString,m=l?l.toStringTag:void 0,g=function(t){return null==t?void 0===t?"[object Undefined]":"[object Null]":m&&m in Object(t)?function(t){var n=h.call(t,v),e=t[v];try{t[v]=void 0;var r=!0}catch(t){}var o=d.call(t);return r&&(n?t[v]=e:delete t[v]),o}(t):function(t){return y.call(t)}(t)},b=/^\s+|\s+$/g,x=/^[-+]0x[0-9a-f]+$/i,_=/^0b[01]+$/i,w=/^0o[0-7]+$/i,S=parseInt,E=function(t){if("number"==typeof t)return t;if(function(t){return"symbol"==typeof t||function(t){return null!=t&&"object"==typeof t}(t)&&"[object Symbol]"==g(t)}(t))return NaN;if(c(t)){var n="function"==typeof t.valueOf?t.valueOf():t;t=c(n)?n+"":n}if("string"!=typeof t)return 0===t?t:+t;t=t.replace(b,"");var e=_.test(t);return e||w.test(t)?S(t.slice(2),e?2:8):x.test(t)?NaN:+t},O=function(t,n,e){return void 0===e&&(e=n,n=void 0),void 0!==e&&(e=(e=E(e))==e?e:0),void 0!==n&&(n=(n=E(n))==n?n:0),function(t,n,e){return t==t&&(void 0!==e&&(t=t<=e?t:e),void 0!==n&&(t=t>=n?t:n)),t}(E(t),n,e)};function T(t,n){return void 0===t&&(t=-1/0),void 0===n&&(n=1/0),function(e,r){var o="_"+r;Object.defineProperty(e,r,{get:function(){return this[o]},set:function(e){Object.defineProperty(this,o,{value:O(e,t,n),enumerable:!1,writable:!0,configurable:!0})},enumerable:!0,configurable:!0})}}function A(t,n){var e="_"+n;Object.defineProperty(t,n,{get:function(){return this[e]},set:function(t){Object.defineProperty(this,e,{value:!!t,enumerable:!1,writable:!0,configurable:!0})},enumerable:!0,configurable:!0})}var M=function(){return f.Date.now()},P=Math.max,j=Math.min,k=function(t,n,e){var r,o,i,u,s,a,f=0,l=!1,p=!1,h=!0;if("function"!=typeof t)throw new TypeError("Expected a function");function d(n){var e=r,i=o;return r=o=void 0,f=n,u=t.apply(i,e)}function v(t){var e=t-a;return void 0===a||e>=n||e<0||p&&t-f>=i}function y(){var t=M();if(v(t))return m(t);s=setTimeout(y,function(t){var e=n-(t-a);return p?j(e,i-(t-f)):e}(t))}function m(t){return s=void 0,h&&r?d(t):(r=o=void 0,u)}function g(){var t=M(),e=v(t);if(r=arguments,o=this,a=t,e){if(void 0===s)return function(t){return f=t,s=setTimeout(y,n),l?d(t):u}(a);if(p)return s=setTimeout(y,n),d(a)}return void 0===s&&(s=setTimeout(y,n)),u}return n=E(n)||0,c(e)&&(l=!!e.leading,i=(p="maxWait"in e)?P(E(e.maxWait)||0,n):i,h="trailing"in e?!!e.trailing:h),g.cancel=function(){void 0!==s&&clearTimeout(s),f=0,r=a=o=s=void 0},g.flush=function(){return void 0===s?u:m(M())},g};function D(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];return function(n,e,r){var o=r.value;return{get:function(){return this.hasOwnProperty(e)||Object.defineProperty(this,e,{value:k.apply(void 0,[o].concat(t))}),this[e]}}}}var L,N=function(){function t(t){var n=this;void 0===t&&(t={}),this.damping=.1,this.thumbMinSize=20,this.renderByPixels=!0,this.alwaysShowTracks=!1,this.continuousScrolling=!0,this.delegateTo=null,this.plugins={},Object.keys(t).forEach(function(e){n[e]=t[e]})}return Object.defineProperty(t.prototype,"wheelEventTarget",{get:function(){return this.delegateTo},set:function(t){console.warn("[smooth-scrollbar]: `options.wheelEventTarget` is deprecated and will be removed in the future, use `options.delegateTo` instead."),this.delegateTo=t},enumerable:!0,configurable:!0}),u([T(0,1)],t.prototype,"damping",void 0),u([T(0,1/0)],t.prototype,"thumbMinSize",void 0),u([A],t.prototype,"renderByPixels",void 0),u([A],t.prototype,"alwaysShowTracks",void 0),u([A],t.prototype,"continuousScrolling",void 0),t}(),z=new WeakMap;function C(){if(void 0!==L)return L;var t=!1;try{var n=function(){},e=Object.defineProperty({},"passive",{get:function(){t=!0}});window.addEventListener("testPassive",n,e),window.removeEventListener("testPassive",n,e)}catch(t){}return L=!!t&&{passive:!1}}function R(t){var n=z.get(t)||[];return z.set(t,n),function(t,e,r){function o(t){t.defaultPrevented||r(t)}e.split(/\s+/g).forEach(function(e){n.push({elem:t,eventName:e,handler:o}),t.addEventListener(e,o,C())})}}function F(t){var n=function(t){return t.touches?t.touches[t.touches.length-1]:t}(t);return{x:n.clientX,y:n.clientY}}function I(t,n){return void 0===n&&(n=[]),n.some(function(n){return t===n})}var W=["webkit","moz","ms","o"],H=new RegExp("^-(?!(?:"+W.join("|")+")-)");function B(t,n){n=function(t){var n={};return Object.keys(t).forEach(function(e){if(H.test(e)){var r=t[e];e=e.replace(/^-/,""),n[e]=r,W.forEach(function(t){n["-"+t+"-"+e]=r})}else n[e]=t[e]}),n}(n),Object.keys(n).forEach(function(e){var r=e.replace(/^-/,"").replace(/-([a-z])/g,function(t,n){return n.toUpperCase()});t.style[r]=n[e]})}var G,X=function(){function t(t){this.updateTime=Date.now(),this.delta={x:0,y:0},this.velocity={x:0,y:0},this.lastPosition={x:0,y:0},this.lastPosition=F(t)}return t.prototype.update=function(t){var n=this.velocity,e=this.updateTime,r=this.lastPosition,o=Date.now(),i=F(t),u={x:-(i.x-r.x),y:-(i.y-r.y)},c=o-e||16,s=u.x/c*16,a=u.y/c*16;n.x=.9*s+.1*n.x,n.y=.9*a+.1*n.y,this.delta=u,this.updateTime=o,this.lastPosition=i},t}(),V=function(){function t(){this._touchList={}}return Object.defineProperty(t.prototype,"_primitiveValue",{get:function(){return{x:0,y:0}},enumerable:!0,configurable:!0}),t.prototype.isActive=function(){return void 0!==this._activeTouchID},t.prototype.getDelta=function(){var t=this._getActiveTracker();return t?i({},t.delta):this._primitiveValue},t.prototype.getVelocity=function(){var t=this._getActiveTracker();return t?i({},t.velocity):this._primitiveValue},t.prototype.track=function(t){var n=this,e=t.targetTouches;return Array.from(e).forEach(function(t){n._add(t)}),this._touchList},t.prototype.update=function(t){var n=this,e=t.touches,r=t.changedTouches;return Array.from(e).forEach(function(t){n._renew(t)}),this._setActiveID(r),this._touchList},t.prototype.release=function(t){var n=this;delete this._activeTouchID,Array.from(t.changedTouches).forEach(function(t){n._delete(t)})},t.prototype._add=function(t){if(!this._has(t)){var n=new X(t);this._touchList[t.identifier]=n}},t.prototype._renew=function(t){this._has(t)&&this._touchList[t.identifier].update(t)},t.prototype._delete=function(t){delete this._touchList[t.identifier]},t.prototype._has=function(t){return this._touchList.hasOwnProperty(t.identifier)},t.prototype._setActiveID=function(t){this._activeTouchID=t[t.length-1].identifier},t.prototype._getActiveTracker=function(){return this._touchList[this._activeTouchID]},t}();!function(t){t.X="x",t.Y="y"}(G||(G={}));var U=function(){function t(t,n){void 0===n&&(n=0),this._direction=t,this._minSize=n,this.element=document.createElement("div"),this.displaySize=0,this.realSize=0,this.offset=0,this.element.className="scrollbar-thumb scrollbar-thumb-"+t}return t.prototype.attachTo=function(t){t.appendChild(this.element)},t.prototype.update=function(t,n,e){this.realSize=Math.min(n/e,1)*n,this.displaySize=Math.max(this.realSize,this._minSize),this.offset=t/e*(n+(this.realSize-this.displaySize)),B(this.element,this._getStyle())},t.prototype._getStyle=function(){switch(this._direction){case G.X:return{width:this.displaySize+"px","-transform":"translate3d("+this.offset+"px, 0, 0)"};case G.Y:return{height:this.displaySize+"px","-transform":"translate3d(0, "+this.offset+"px, 0)"};default:return null}},t}(),Y=function(){function t(t,n){void 0===n&&(n=0),this.element=document.createElement("div"),this._isShown=!1,this.element.className="scrollbar-track scrollbar-track-"+t,this.thumb=new U(t,n),this.thumb.attachTo(this.element)}return t.prototype.attachTo=function(t){t.appendChild(this.element)},t.prototype.show=function(){this._isShown||(this._isShown=!0,this.element.classList.add("show"))},t.prototype.hide=function(){this._isShown&&(this._isShown=!1,this.element.classList.remove("show"))},t.prototype.update=function(t,n,e){B(this.element,{display:e<=n?"none":"block"}),this.thumb.update(t,n,e)},t}(),q=function(){function t(t){this._scrollbar=t;var n=t.options.thumbMinSize;this.xAxis=new Y(G.X,n),this.yAxis=new Y(G.Y,n),this.xAxis.attachTo(t.containerEl),this.yAxis.attachTo(t.containerEl),t.options.alwaysShowTracks&&(this.xAxis.show(),this.yAxis.show())}return t.prototype.update=function(){var t=this._scrollbar,n=t.size,e=t.offset;this.xAxis.update(e.x,n.container.width,n.content.width),this.yAxis.update(e.y,n.container.height,n.content.height)},t.prototype.autoHideOnIdle=function(){this._scrollbar.options.alwaysShowTracks||(this.xAxis.hide(),this.yAxis.hide())},u([D(300)],t.prototype,"autoHideOnIdle",null),t}(),K=new WeakMap;function $(t){return Math.pow(t-1,3)+1}var J,Q,Z,tt=function(){function t(t,n){var e=this.constructor;this.scrollbar=t,this.name=e.pluginName,this.options=i({},e.defaultOptions,n)}return t.prototype.onInit=function(){},t.prototype.onDestory=function(){},t.prototype.onUpdate=function(){},t.prototype.onRender=function(t){},t.prototype.transformDelta=function(t,n){return i({},t)},t.pluginName="",t.defaultOptions={},t}(),nt={order:new Set,constructors:{}};function et(t){var n=R(t),e=t.containerEl;n(e,"keydown",function(n){var r=document.activeElement;if((r===e||e.contains(r))&&!function(t){return("INPUT"===t.tagName||"TEXTAREA"===t.tagName)&&!t.disabled}(r)){var o=function(t,n){var e=t.size,r=t.limit,o=t.offset;switch(n){case J.TAB:return function(t){requestAnimationFrame(function(){t.scrollIntoView(document.activeElement,{offsetTop:t.size.container.height/2,onlyScrollIfNeeded:!0})})}(t);case J.SPACE:return[0,200];case J.PAGE_UP:return[0,40-e.container.height];case J.PAGE_DOWN:return[0,e.container.height-40];case J.END:return[0,r.y-o.y];case J.HOME:return[0,-o.y];case J.LEFT:return[-40,0];case J.UP:return[0,-40];case J.RIGHT:return[40,0];case J.DOWN:return[0,40];default:return null}}(t,n.keyCode||n.which);if(o){var i=o[0],u=o[1];t.addTransformableMomentum(i,u,n,function(e){e?n.preventDefault():(t.containerEl.blur(),t.parent&&t.parent.containerEl.focus())})}}})}function rt(t){var n,e,r,o,i,u=R(t),c=t.containerEl,s=t.track,a=s.xAxis,f=s.yAxis;function l(n,e){var r=t.size;return n===Q.X?e/(r.container.width+(a.thumb.realSize-a.thumb.displaySize))*r.content.width:n===Q.Y?e/(r.container.height+(f.thumb.realSize-f.thumb.displaySize))*r.content.height:0}function p(t){return I(t,[a.element,a.thumb.element])?Q.X:I(t,[f.element,f.thumb.element])?Q.Y:void 0}u(c,"click",function(n){if(!e&&I(n.target,[a.element,f.element])){var r=n.target,o=p(r),i=r.getBoundingClientRect(),u=F(n),c=t.offset,s=t.limit;if(o===Q.X){var h=u.x-i.left-a.thumb.displaySize/2;t.setMomentum(O(l(o,h)-c.x,-c.x,s.x-c.x),0)}o===Q.Y&&(h=u.y-i.top-f.thumb.displaySize/2,t.setMomentum(0,O(l(o,h)-c.y,-c.y,s.y-c.y)))}}),u(c,"mousedown",function(e){if(I(e.target,[a.thumb.element,f.thumb.element])){n=!0;var u=e.target,s=F(e),l=u.getBoundingClientRect();o=p(u),r={x:s.x-l.left,y:s.y-l.top},i=c.getBoundingClientRect(),B(t.containerEl,{"-user-select":"none"})}}),u(window,"mousemove",function(u){if(n){e=!0;var c=t.offset,s=F(u);if(o===Q.X){var a=s.x-r.x-i.left;t.setPosition(l(o,a),c.y)}o===Q.Y&&(a=s.y-r.y-i.top,t.setPosition(c.x,l(o,a)))}}),u(window,"mouseup blur",function(){n=e=!1,B(t.containerEl,{"-user-select":""})})}function ot(t){R(t)(window,"resize",k(t.update.bind(t),300))}function it(t){var n,e=R(t),r=t.containerEl,o=t.contentEl,i=t.offset,u=t.limit,c=!1;e(window,"mousemove",function(e){c&&(cancelAnimationFrame(n),function e(r){var o=r.x,c=r.y;(o||c)&&(t.setMomentum(O(i.x+o,0,u.x)-i.x,O(i.y+c,0,u.y)-i.y),n=requestAnimationFrame(function(){e({x:o,y:c})}))}(function(t,n){var e=t.bounding,r=e.top,o=e.right,i=e.bottom,u=e.left,c=F(n),s=c.x,a=c.y,f={x:0,y:0};return 0===s&&0===a?f:(s>o-20?f.x=s-o+20:s<u+20&&(f.x=s-u-20),a>i-20?f.y=a-i+20:a<r+20&&(f.y=a-r-20),f.x*=2,f.y*=2,f)}(t,e)))}),e(o,"selectstart",function(t){t.stopPropagation(),cancelAnimationFrame(n),c=!0}),e(window,"mouseup blur",function(){cancelAnimationFrame(n),c=!1}),e(r,"scroll",function(t){t.preventDefault(),r.scrollTop=r.scrollLeft=0})}function ut(t){var n,e=/Android/.test(navigator.userAgent)?3:2,r=t.options.delegateTo||t.containerEl,o=new V,i=R(t),u=0;i(r,"touchstart",function(e){o.track(e),t.setMomentum(0,0),0===u&&(n=t.options.damping,t.options.damping=Math.max(n,.5)),u++}),i(r,"touchmove",function(n){if(!Z||Z===t){o.update(n);var e=o.getDelta(),r=e.x,i=e.y;t.addTransformableMomentum(r,i,n,function(e){e&&(n.preventDefault(),Z=t)})}}),i(r,"touchcancel touchend",function(r){var i=o.getVelocity(),c={x:0,y:0};Object.keys(i).forEach(function(t){var r=i[t]/n;c[t]=Math.abs(r)<50?0:r*e}),t.addTransformableMomentum(c.x,c.y,r),0==--u&&(t.options.damping=n),o.release(r),Z=null})}function ct(t){R(t)(t.options.delegateTo||t.containerEl,"onwheel"in window||document.implementation.hasFeature("Events.wheel","3.0")?"wheel":"mousewheel",function(n){var e=function(t){if("deltaX"in t){var n=ft(t.deltaMode);return{x:t.deltaX/st.STANDARD*n,y:t.deltaY/st.STANDARD*n}}return"wheelDeltaX"in t?{x:t.wheelDeltaX/st.OTHERS,y:t.wheelDeltaY/st.OTHERS}:{x:0,y:t.wheelDelta/st.OTHERS}}(n),r=e.x,o=e.y;t.addTransformableMomentum(r,o,n,function(t){t&&n.preventDefault()})})}!function(t){t[t.TAB=9]="TAB",t[t.SPACE=32]="SPACE",t[t.PAGE_UP=33]="PAGE_UP",t[t.PAGE_DOWN=34]="PAGE_DOWN",t[t.END=35]="END",t[t.HOME=36]="HOME",t[t.LEFT=37]="LEFT",t[t.UP=38]="UP",t[t.RIGHT=39]="RIGHT",t[t.DOWN=40]="DOWN"}(J||(J={})),function(t){t[t.X=0]="X",t[t.Y=1]="Y"}(Q||(Q={}));var st={STANDARD:1,OTHERS:-3},at=[1,28,500],ft=function(t){return at[t]||at[0]},lt=new Map,pt=function(){function t(t,n){var e=this;this.offset={x:0,y:0},this.limit={x:1/0,y:1/0},this.bounding={top:0,right:0,bottom:0,left:0},this._plugins=[],this._momentum={x:0,y:0},this._listeners=new Set,this.containerEl=t;var r=this.contentEl=document.createElement("div");this.options=new N(n),t.setAttribute("data-scrollbar","true"),t.setAttribute("tabindex","-1"),B(t,{overflow:"hidden",outline:"none"}),window.navigator.msPointerEnabled&&(t.style.msTouchAction="none"),r.className="scroll-content",Array.from(t.childNodes).forEach(function(t){r.appendChild(t)}),t.appendChild(r),this.track=new q(this),this.size=this.getSize(),this._plugins=function(t,n){return Array.from(nt.order).filter(function(t){return!1!==n[t]}).map(function(e){var r=new(0,nt.constructors[e])(t,n[e]);return n[e]=r.options,r})}(this,this.options.plugins);var o=t.scrollLeft,i=t.scrollTop;t.scrollLeft=t.scrollTop=0,this.setPosition(o,i,{withoutCallbacks:!0});var u=window,c=u.MutationObserver||u.WebKitMutationObserver||u.MozMutationObserver;"function"==typeof c&&(this._observer=new c(function(){e.update()}),this._observer.observe(r,{subtree:!0,childList:!0})),lt.set(t,this),requestAnimationFrame(function(){e._init()})}return Object.defineProperty(t.prototype,"parent",{get:function(){for(var t=this.containerEl.parentElement;t;){var n=lt.get(t);if(n)return n;t=t.parentElement}return null},enumerable:!0,configurable:!0}),Object.defineProperty(t.prototype,"scrollTop",{get:function(){return this.offset.y},set:function(t){this.setPosition(this.scrollLeft,t)},enumerable:!0,configurable:!0}),Object.defineProperty(t.prototype,"scrollLeft",{get:function(){return this.offset.x},set:function(t){this.setPosition(t,this.scrollTop)},enumerable:!0,configurable:!0}),t.prototype.getSize=function(){return n=(t=this).containerEl,e=t.contentEl,{container:{width:n.clientWidth,height:n.clientHeight},content:{width:e.offsetWidth-e.clientWidth+e.scrollWidth,height:e.offsetHeight-e.clientHeight+e.scrollHeight}};var t,n,e},t.prototype.update=function(){var t,n,e,r,o;n=(t=this).getSize(),e={x:Math.max(n.content.width-n.container.width,0),y:Math.max(n.content.height-n.container.height,0)},r=t.containerEl.getBoundingClientRect(),o={top:Math.max(r.top,0),right:Math.min(r.right,window.innerWidth),bottom:Math.min(r.bottom,window.innerHeight),left:Math.max(r.left,0)},t.size=n,t.limit=e,t.bounding=o,t.track.update(),t.setPosition(),this._plugins.forEach(function(t){t.onUpdate()})},t.prototype.isVisible=function(t){return function(t,n){var e=t.bounding,r=n.getBoundingClientRect(),o=Math.max(e.top,r.top),i=Math.max(e.left,r.left),u=Math.min(e.right,r.right);return o<Math.min(e.bottom,r.bottom)&&i<u}(this,t)},t.prototype.setPosition=function(t,n,e){var r=this;void 0===t&&(t=this.offset.x),void 0===n&&(n=this.offset.y),void 0===e&&(e={});var o=function(t,n,e){var r=t.options,o=t.offset,u=t.limit,c=t.track,s=t.contentEl;return r.renderByPixels&&(n=Math.round(n),e=Math.round(e)),n=O(n,0,u.x),e=O(e,0,u.y),n!==o.x&&c.xAxis.show(),e!==o.y&&c.yAxis.show(),r.alwaysShowTracks||c.autoHideOnIdle(),n===o.x&&e===o.y?null:(o.x=n,o.y=e,B(s,{"-transform":"translate3d("+-n+"px, "+-e+"px, 0)"}),c.update(),{offset:i({},o),limit:i({},u)})}(this,t,n);o&&!e.withoutCallbacks&&this._listeners.forEach(function(t){t.call(r,o)})},t.prototype.scrollTo=function(t,n,e,r){void 0===t&&(t=this.offset.x),void 0===n&&(n=this.offset.y),void 0===e&&(e=0),void 0===r&&(r={}),function(t,n,e,r,o){void 0===r&&(r=0);var i=void 0===o?{}:o,u=i.easing,c=void 0===u?$:u,s=i.callback,a=t.options,f=t.offset,l=t.limit;a.renderByPixels&&(n=Math.round(n),e=Math.round(e));var p=f.x,h=f.y,d=O(n,0,l.x)-p,v=O(e,0,l.y)-h,y=Date.now();cancelAnimationFrame(K.get(t)),function n(){var e=Date.now()-y,o=r?c(Math.min(e/r,1)):1;if(t.setPosition(p+d*o,h+v*o),e>=r)"function"==typeof s&&s.call(t);else{var i=requestAnimationFrame(n);K.set(t,i)}}()}(this,t,n,e,r)},t.prototype.scrollIntoView=function(t,n){void 0===n&&(n={}),function(t,n,e){var r=void 0===e?{}:e,o=r.alignToTop,i=void 0===o||o,u=r.onlyScrollIfNeeded,c=void 0!==u&&u,s=r.offsetTop,a=void 0===s?0:s,f=r.offsetLeft,l=void 0===f?0:f,p=r.offsetBottom,h=void 0===p?0:p,d=t.containerEl,v=t.bounding,y=t.offset,m=t.limit;if(n&&d.contains(n)){var g=n.getBoundingClientRect();if(!c||!t.isVisible(n)){var b=i?g.top-v.top-a:g.bottom-v.bottom+h;t.setMomentum(g.left-v.left-l,O(b,-y.y,m.y-y.y))}}}(this,t,n)},t.prototype.addListener=function(t){if("function"!=typeof t)throw new TypeError("[smooth-scrollbar] scrolling listener should be a function");this._listeners.add(t)},t.prototype.removeListener=function(t){this._listeners.delete(t)},t.prototype.addTransformableMomentum=function(t,n,e,r){this._updateDebounced();var o=this._plugins.reduce(function(t,n){return n.transformDelta(t,e)||t},{x:t,y:n}),i=!this._shouldPropagateMomentum(o.x,o.y);i&&this.addMomentum(o.x,o.y),r&&r.call(this,i)},t.prototype.addMomentum=function(t,n){this.setMomentum(this._momentum.x+t,this._momentum.y+n)},t.prototype.setMomentum=function(t,n){0===this.limit.x&&(t=0),0===this.limit.y&&(n=0),this.options.renderByPixels&&(t=Math.round(t),n=Math.round(n)),this._momentum.x=t,this._momentum.y=n},t.prototype.updatePluginOptions=function(t,n){this._plugins.forEach(function(e){e.name===t&&Object.assign(e.options,n)})},t.prototype.destroy=function(){var t=this.containerEl,n=this.contentEl;!function(t){var n=z.get(t);n&&(n.forEach(function(t){var n=t.elem,e=t.eventName,r=t.handler;n.removeEventListener(e,r,C())}),z.delete(t))}(this),this._listeners.clear(),this.setMomentum(0,0),cancelAnimationFrame(this._renderID),this._observer&&this._observer.disconnect(),lt.delete(this.containerEl);for(var e=Array.from(n.childNodes);t.firstChild;)t.removeChild(t.firstChild);e.forEach(function(n){t.appendChild(n)}),B(t,{overflow:""}),t.scrollTop=this.scrollTop,t.scrollLeft=this.scrollLeft,this._plugins.forEach(function(t){t.onDestory()}),this._plugins.length=0},t.prototype._init=function(){var t=this;this.update(),Object.keys(r).forEach(function(n){r[n](t)}),this._plugins.forEach(function(t){t.onInit()}),this._render()},t.prototype._updateDebounced=function(){this.update()},t.prototype._shouldPropagateMomentum=function(t,n){void 0===t&&(t=0),void 0===n&&(n=0);var e=this.options,r=this.offset,o=this.limit;if(!e.continuousScrolling)return!1;0===o.x&&0===o.y&&this._updateDebounced();var i=O(t+r.x,0,o.x),u=O(n+r.y,0,o.y),c=!0;return(c=(c=c&&i===r.x)&&u===r.y)&&(r.x===o.x||0===r.x||r.y===o.y||0===r.y)},t.prototype._render=function(){var t=this._momentum;if(t.x||t.y){var n=this._nextTick("x"),e=this._nextTick("y");t.x=n.momentum,t.y=e.momentum,this.setPosition(n.position,e.position)}var r=i({},this._momentum);this._plugins.forEach(function(t){t.onRender(r)}),this._renderID=requestAnimationFrame(this._render.bind(this))},t.prototype._nextTick=function(t){var n=this.options,e=this.offset,r=this._momentum,o=e[t],i=r[t];if(Math.abs(i)<=.1)return{momentum:0,position:o+i};var u=i*(1-n.damping);return n.renderByPixels&&(u|=0),{momentum:u,position:o+i-u}},u([D(100,{leading:!0})],t.prototype,"_updateDebounced",null),t}(),ht="\n[data-scrollbar] {\n  display: block;\n  position: relative;\n}\n\n.scroll-content {\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n}\n\n.scrollbar-track {\n  position: absolute;\n  opacity: 0;\n  z-index: 1;\n  background: rgba(222, 222, 222, .75);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  -webkit-transition: opacity 0.5s 0.5s ease-out;\n          transition: opacity 0.5s 0.5s ease-out;\n}\n.scrollbar-track.show,\n.scrollbar-track:hover {\n  opacity: 1;\n  -webkit-transition-delay: 0s;\n          transition-delay: 0s;\n}\n\n.scrollbar-track-x {\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 8px;\n}\n.scrollbar-track-y {\n  top: 0;\n  right: 0;\n  width: 8px;\n  height: 100%;\n}\n.scrollbar-thumb {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 8px;\n  height: 8px;\n  background: rgba(0, 0, 0, .5);\n  border-radius: 4px;\n}\n",dt="smooth-scrollbar-style",vt=!1;function yt(){if(!vt&&"undefined"!=typeof window){var t=document.createElement("style");t.id=dt,t.textContent=ht,document.head&&document.head.appendChild(t),vt=!0}}e.d(n,"ScrollbarPlugin",function(){return tt});
+
+     })
+ */
+    $(function () {
+        console.log()
+        var cursor = document.getElementById('cursor')
+        var cursorF = document.getElementById('cursorF')
+        var cursorl = document.getElementById('cursorl')
+        var cursorR = document.getElementById('cursorR')
+        var cursorT = document.getElementById('cursorT')
+        var cursorB = document.getElementById('cursorB')
+
+        function lerp(start, end, amount, cursor) {
+            return (1 - amount) * start + amount * end
+        }
+
+        //const cursorF = document.createElement('div');
+        //cursorF.addclassName = 'cursor-f';
+        $(cursorF).addClass('cursormove')
+        $(cursorl).addClass('cursormove')
+        $(cursorR).addClass('cursormove')
+        $(cursorT).addClass('cursormove')
+        $(cursorB).addClass('cursormove')
+
+        let cursorX = 0;
+        let cursorY = 0;
+        var pageX = window.scrollX;
+        var pageY = window.scrollY;
+        let size = 8;
+        let sizeF = 90;
+        let followSpeed = .20;
+        var scrollY = 0;
+        var aY = 0;
+        //document.body.appendChild(cursorF);
+        if ($(window).click() == true) {
+
+            cursorF.style.display = 'none';
+            cursorl.style.display = 'none';
+            cursorR.style.display = 'none';
+            cursorT.style.display = 'none';
+            cursorB.style.display = 'none';
+        }
+        $(document).scroll(function () {
+
+
+            aY += (window.scrollY - scrollY);
+            scrollY = window.scrollY
+
+        })
+        document.addEventListener('mousemove', function (e) {
+
+            pageX = e.clientX;
+            pageY = e.clientY;
+
+        });
+        //  document .addEventListener('scroll', function (e) {
+        //      pageX = e.clientX+window.pageXOffset;
+        //     pageY = e.clientY+window.pageYOffset;
+        // });
+        function loop() {
+
+
+            cursorX = lerp(cursorX, pageX, followSpeed, cursor);
+            cursorY = lerp(cursorY, pageY, followSpeed, cursor);
+
+            cursorF.style.top = (cursorY + aY - $("#cursorF").height() / 2) + 'px';
+            cursorF.style.left = (cursorX - $("#cursorF").width() / 2) + 'px';
+            cursorl.style.top = (cursorY + aY - 38.67 / 2) + 'px';
+            cursorl.style.left = (cursorX - $("#cursorF").width() / 2 - 25) + 'px';
+            cursorR.style.top = (cursorY + aY - 38.67 / 2) + 'px';
+            cursorR.style.left = (cursorX + $("#cursorF").width() / 2 + 5) + 'px';
+            cursorT.style.top = (cursorY + aY - $("#cursorF").height() / 2 - 25) + 'px';
+            cursorT.style.left = (cursorX - 10) + 'px';
+            cursorB.style.top = (cursorY + aY + $("#cursorF").height() / 2 + 5) + 'px';
+            cursorB.style.left = (cursorX + -10) + 'px';
+            // var Y =  cursorY + aY - sizeF / 2 + 'px';
+            // var Y =  cursorY + aY - sizeF / 2 + 'px';
+            // var X = cursorX - sizeF / 2 + 'px';
+            // cursorF.css("top",Y);
+            // cursorF.css("left",X);
+            requestAnimationFrame(loop);//每秒运行loop()自适应次数，在 requestAnimationFrame 之前，主要借助 setTimeout/ setInterval 来编写 JS 动画，而动画的关键在于动画帧之间的时间间隔设置，这个时间间隔的设置有讲究，一方面要足够小，这样动画帧之间才有连贯性，动画效果才显得平滑流畅；另一方面要足够大，确保浏览器有足够的时间及时完成渲染。
+        }
+
+        loop(cursor);
+
+        //                                                       鼠标跟随效果
+
+        function get_current_element(event) {
+            var x = event.clientX, y = event.clientY,
+                element = document.elementFromPoint(x, y);
+            return element
+        }
+
+
+        $(".third",).mouseleave(function (event) {
+            $("#drug").fadeOut();
+            $("#cursorl").fadeOut();
+            $("#cursorR").fadeOut();
+            $("#cursorT").fadeOut();
+            $("#cursorB").fadeOut();
+            $("#cursorF").addClass('cursor-f');
+            $("#cursorF").animate({width: "30px", height: "30px"});
+        })
+
+        $(".secondary ").mouseleave(function (event) {
+            $("#drug").fadeOut();
+            $("#cursorl").fadeOut();
+            $("#cursorR").fadeOut();
+            $("#cursorT").fadeOut();
+            $("#cursorB").fadeOut();
+            $("#cursorF").addClass('cursor-f');
+            $("#cursorF").animate({width: "30px", height: "30px"});
+        })
+
+        $(".main").mouseenter(function (event) {
+            $("#drug").fadeOut();
+            $("#cursorl").fadeOut();
+            $("#cursorR").fadeOut();
+            $("#cursorT").fadeOut();
+            $("#cursorB").fadeOut();
+            $("#cursorF").addClass('cursor-f');
+            $("#cursorF").animate({width: "30px", height: "30px"});
+        })
+        /* $(".main").mouseleave(function (event){
+
+             $("#drug").fadeIn();
+             $("#cursorl").fadeIn();
+             $("#cursorR").fadeIn();
+             $("#cursorF").addClass('cursor-f');
+             $("#cursorF").animate({ width: "80px", height: "80px" });
+
+         })*/
+
+
+        $(".secondary").mouseenter(function (event) {
+
+
+                TBout()
+                $("#drug").removeClass('arrows')
+                $("#cursorF").addClass('cursor-f');
+                $("#cursorF").animate({width: "80px", height: "80px"});
+
+
+            }, DragIn(),
+            LRin())
+
+
+        $(".third").mouseenter(function (event) {
+            $("#drug").fadeOut();
+            $("#drug").removeClass('arrows')
+            LRout()
+            TBout()
+            $("#cursorF").addClass('cursor-f');
+            $("#cursorF").animate({width: "140px", height: "140px"});
+        })
+
+        $(".forth").mouseenter(function (event) {
+            ClickIn()
+            LRout()
+            TBin()
+            $("#drug").removeClass('arrows')
+            $("#cursorF").addClass('cursor-f');
+            $("#cursorF").animate({width: "80px", height: "80px"});
+
+        })
+
+        $(".fifth").mouseenter(function (event) {
+            $("#drug").html(">");
+            $("#drug").addClass('arrows')
+            LRout()
+            TBout()
+            $("#cursorF").addClass('cursor-f');
+            $("#cursorF").animate({width: "80px", height: "80px"});
+
+        })
+
+
+        function LRin() {
+            $("#cursorl").fadeIn();
+            $("#cursorR").fadeIn();
+        }
+
+        function LRout() {
+            $("#cursorl").fadeOut();
+            $("#cursorR").fadeOut();
+        }
+
+        function TBin() {
+            $("#cursorT").fadeIn();
+            $("#cursorB").fadeIn();
+        }
+
+        function TBout() {
+            $("#cursorT").fadeOut();
+            $("#cursorB").fadeOut();
+        }
+
+        function ClickIn() {
+            $("#drug").html("CLICK");
+            $("#drug").addClass('shape');
+        }
+
+        function DragIn() {
+            $("#drug").fadeIn();
+            $("#drug").html("DRAG");
+            $("#drug").addClass('shape');
+        }
+    })
+    $(function () {
+
+        $(".AboutUs-4-1-10").mousedown(function (event) {
+            deltay = event.clientY - $(this).offset().top
+            $(document).bind('mousemove', start)
+            $(document).bind('mouseup', end)
+            return false
+        })
+
+        function start(event) {
+            y = event.clientY - deltay - 1450
+            if (y >= 0 && y < 200) {
+                $(".AboutUs-4-1-10").css({'top': y + 'px'})
+            }
+            if (y >= 200) {
+                $(".AboutUs-4-1-10").animate({top: "900px"})
+            }
+            return false
+
+        }
+
+
+        function end(event) {
+            $(this).unbind('mousemove')
+            $(this).unbind('mouseup')
+        }
+
+
+    })
+</script>
+
+</html>
+<!--
+方：font-family: 'Orbitron', sans-serif;
+条形码：font-family: 'Libre Barcode 39 Extended Text', cursive;
+手写：font-family: 'Permanent Marker', cursive;
+圆：font-family: 'Nunito', sans-serif;font-family: 'Raleway', sans-serif;font-family: 'Preahvihear', cursive;
+哈利波特：font-family: 'Modern Antiqua', cursive;
+
+font-family: 'Hanalei Fill', cursive;
+
+
+font-family: 'Do Hyeon', sans-serif;
+
+
+font-family: 'Cabin', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Righteous', cursive;
+
+
+font-family: 'Monoton', cursive;
+
+font-family: 'Playfair Display SC', serif;-->
